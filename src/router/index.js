@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import DOSCG from './DOSCG';
 
 const routes = [
   {
@@ -19,7 +20,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes: [
+    ...routes,
+    ...DOSCG,
+  ],
 });
 
 export default router;
